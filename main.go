@@ -9,7 +9,7 @@ func main() {
 
     plugin.Serve(
         &plugin.ServeOpts{
-            ProviderFunc: vault.New,
+            ProviderFunc: vaultinternal.New,
             ProviderAddr: "app.terraform.io/SLUS-DCP/vault-internal",
         },
     )
