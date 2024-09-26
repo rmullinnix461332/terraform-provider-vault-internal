@@ -71,7 +71,6 @@ func NewVaultClient(server string, role string, jwt_path string) (VaultClient, e
 
 func (vc *VaultClient) GetSecrets(secretPath string) (map[string]string, error) {
 	secrets := make(map[string]string, 0)
-    logger.Info.Println("path", secretPath)
 	client := &http.Client{Transport: transport}
 
 	reqUrl := vc.Server +  "/v1/" + secretPath
